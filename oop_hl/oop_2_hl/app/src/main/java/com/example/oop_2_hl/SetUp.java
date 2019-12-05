@@ -1,30 +1,31 @@
 package com.example.oop_2_hl;
 
-import android.content.Context;
-import android.widget.Button;
-
-public class SetUp {
-    private SetUpListner setUpListner=null;
+public class MemberControl {
+    private FunctionListner functionListner =null;
     protected String strRead="true";
     protected String strWrite="true";
     protected String strDelete="true";
     protected String strControl="true";
 
     public void read(){
-        setUpListner.onRead(strRead);
+        functionListner.onRead(strRead);
     }
     public void write(){
-        setUpListner.onWrite(strWrite);
+        functionListner.onWrite(strWrite);
     }
     public void delete(){
-        setUpListner.onDelete(strDelete);
+        functionListner.onDelete(strDelete);
     }
     public void control(){
-        setUpListner.onControl(strControl);
+        functionListner.onControl(strControl);
     }
-
-    public void onSetUpListener(SetUpListner listner){
-        this.setUpListner=listner;
+    public void Function(){
+        read();
+        write();
+        delete();
+        control();
     }
-
+    public void onSetUpListener(FunctionListner listner){
+        this.functionListner =listner;
+    }
 }

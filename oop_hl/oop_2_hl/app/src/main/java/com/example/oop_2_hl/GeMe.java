@@ -1,17 +1,13 @@
 package com.example.oop_2_hl;
 
-import android.content.Context;
-import android.view.View;
-import android.widget.Button;
-
-public class GeMe extends SetUp{
+public class GeneralMember extends MemberControl {
     public void write(){
         super.strWrite="false";
         super.write();
     }
     public void delete(){
         super.strDelete="false";
-        super.write();
+        super.delete();
     }
     public void control(){
         super.strControl="false";
